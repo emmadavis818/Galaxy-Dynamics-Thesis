@@ -6,17 +6,18 @@ import gala.dynamics as gd
 import gala.potential as gp
 from gala.units import galactic
 directory = "Folder/"
-filename = "v10_225_p5_n1_dt01"
+filename = "FileName"
 print(filename)
 
 # %%
 orbitdict = {}
 orbitcount = 0
 maxIter = 500
-dT = 0.1 #* u.Myr
+dT = 0.1 #* u.Myr 
 noiselevel = 0.1
 print('noise level is ',noiselevel)
 w0 = gd.PhaseSpacePosition(pos=[5., 0., 0.]*u.kpc,vel=[10, 225, 0.]*u.km/u.s)
+# w0 = gd.PhaseSpacePosition(pos=[-8.1, 0, 0.02]*u.kpc,vel=[13, 245, 8.]*u.km/u.s) # phase space of Sun
 
 # %%
 while orbitcount < maxIter:
